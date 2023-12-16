@@ -56,6 +56,6 @@
     localStorage.setItem('usuarios', JSON.stringify(usuariosAlmacenados));
 
     alert('Usuario registrado exitosamente');
-    window.location.href = './login.html';
+    window.location.href = './index.html';
     return false; // Cambiado de true a false para evitar la sumisión del formulario
     }

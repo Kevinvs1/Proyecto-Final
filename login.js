@@ -16,7 +16,7 @@ function iniciarSesion() {
 
     if (usuarioValido) {
       alert('Inicio de sesión exitoso');
-      location.href = './index.html';
+      location.href = './main.html';
       return false;
     } else {
       alert('Credenciales incorrectas');

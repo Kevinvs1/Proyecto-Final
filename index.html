@@ -10,90 +10,41 @@
 </head>
 
 <body>
-
-  <div class="container">
     <header>
         <h2 class="logo">Juego de laberinto</h2>
         <nav class="navigation">
-            <a href="index.html">Home</a>
-            <button class="btnLogin-popup" onclick="location.href='./Login.html'">Cerrar sesion</button>
+            <button class="btnLogin-popup">Login</button>
         </nav>
     </header>
-      <h1 class="heading">Somos una pagina web diseñada a juegos de laberinto donde puedes demostrar tu nivel de solucion y rapidez para solucionar un laberinto.</h1>
-      <div class="box-container">
-  
-          <div class="box">
-              <img src="smile.png" alt="">
-              <h2>Solo Laberinto</h2>
-              <p > Laberinto sencillo para aquellos que quieran perderse sin estres, o al menos con un poco de estres</p>
-              <h2>Selecciona un nivel:</h2>
-                                <form name="my-form" action="" method="post">
-                                    <select name="niveles" class="btn">
-                                        <option value="pequeño">Laberinto pequeño</option>
-                                        <option value="mediano">Laberinto mediano</option>
-                                        <option value="grande">Laberinto grande</option>
-                                        <option value="muy grande">Laberinto muy grande</option>
-                                    </select>
-                                    <br />
-                                    <input class="btn" type="submit" value="Jugar" name="submit">
-                                </form>
-                                
-                                
-          </div>
-  
-          <div class="box">
-              <img src="preocupado.png" alt="">
-              <h2>Laberinto para gente experimentada</h2>
-              <p> Completa el laberinto sin retroceder ni golpear la pared, realmente sin dudas. Es más dificil de lo que piensas.</p>
-              <h2>Selecciona un nivel:</h2>
-                                <form>
-                                    <select id="niveles" name="niveles" class="btn">
-                                        <option value="pequeño">Laberinto experto pequeño</option>
-                                        <option value="mediano">Laberinto experto mediano</option>
-                                        <option value="grande">Laberinto experto grande</option>
-                                    </select>
-                                </form>
-                                <input onclick="location.href='./game/game.html'" class="btn" type="submit" value="Jugar">
-          </div>
-  
-          <div class="box">
-              <img src="reloj.png" alt="">
-              <h2>Laberinto contra reloj</h2>
-              <p>Carrera contrareloj completa todos los laberintos que puedas en los periodos de tiempo indicados.</p>
-              <h2>Selecciona un nivel:</h2>
-                                  <form>
-                                      <select id="niveles" name="niveles" class="btn">
-                                          <option value="muy pequeño">Laberinto muy pequeño</option>
-                                          <option value="pequeño">Laberinto mediano</option>
-                                          <option value="grande">Laberinto grande</option>
-                                      </select>
-                                      <form>
-                                        <select id="tiempo" name="tiempo" class="btn">
-                                            <option value="diez">10 minutos</option>
-                                            <option value="veinte">20 minutos</option>
-                                            <option value="treinta">30 minutos</option>
-                                            <option value="cuarenta">40 minutos</option>
-                                            <option value="cincuenta">50 minutos</option>
-                                            <option value="sesenta">60 minutos</option>
-                                        </select>
-                                    </form>
-                                    <input onclick="location.href='./game/game.html'" class="btn" type="submit" value="Jugar">
-          </div>
-  
-  
-  
-  
-      </div>
-  
-  </div>
 
-
-
-
-  </div>
-
+    <div class="wrapper">
+        <div class="form-box login" onsubmit="return iniciarSesion()">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="usuario" id="usuario" name="usuario" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock"></ion-icon></span>
+                    <input type="password" id="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                    Recuerdame</label>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>¿No tienes una cuenta?<a
+                        href="register.html"
+                        class="register-link">Registrarse</a>
+                </div>
+            </form>
+        </div>
+    </div>    
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="script.js"></script>
+    <script src="login.js"></script>
 </body>
-
-</html>
