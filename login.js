@@ -19,7 +19,9 @@ function iniciarSesion() {
       location.href = './main.html';
       return false;
     } else {
-      alert('Credenciales incorrectas');
+      alert('Credenciales incorrectas volver a registrarse');
+      document.querySelector('.login').style.display = 'none';
+      document.querySelector('.register').style.display = 'block';
       return false;
     }
   }
@@ -51,8 +53,9 @@ function iniciarSesion() {
     localStorage.setItem('usuarios', JSON.stringify(usuariosAlmacenados));
 
     alert('Usuario registrado exitosamente');
-    window.location.href = './index.html';
-    return false; // Cambiado de true a false para evitar la sumisión del formulario
+    document.querySelector('.login').style.display = 'block';
+    document.querySelector('.register').style.display = 'none';
+    return true; // Cambiado de true a false para evitar la sumisión del formulario
     }
 
   function mostrarRegistro() {
@@ -64,3 +67,5 @@ function iniciarSesion() {
     document.querySelector('.login').style.display = 'block';
     document.querySelector('.register').style.display = 'none';
   }
+
+  
