@@ -4,39 +4,44 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
+    margin: 0; /* Añadir margen cero para evitar espacios no deseados */
 }
 
-body .contenedor{
-    background:#F2F2F2;
-    font-size-adjust:central;
-    width:100%;
-    margin-bottom:500px;
-    text-align:center;
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
 }
 
-.btn{
+body .contenedor {
+    background: linear-gradient(45deg, rgb(99, 94, 94), rgb(235, 235, 235));
+    font-size-adjust: central;
+    width: 100%;
+    margin-bottom: 500px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.btn {
     margin-top: 10px;
     display: inline-block;
-    background:#333;
-    color:#fff;
+    background: #333;
+    color: #fff;
     font-size: 13px;
     border-radius: 5px;
     padding: 8px 25px;
 }
 
-h2 {
-    color: 000;
-}
-
-p {
-    color: 000;
+h2, p {
+    color: #000; /* Corregir el color (debería ser #000 en lugar de 000) */
 }
 
 .row {
@@ -53,16 +58,32 @@ p {
     box-shadow: 0 0 0 2px #000;
     height: calc(100vh - 8px);
     margin-top: 80px;
-    background: #fff;
+    background: linear-gradient(45deg, rgb(99, 94, 94), rgb(235, 235, 235));
+}
+
+.sidebar a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    display: block;
+    transition: 0.3s;
 }
 
 .game-area {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Alinear la parte superior del game-area con la parte superior de la sidebar */
     flex-direction: column;
     min-width: 450px;
+    padding: 20px; /* Añadir un poco de espacio alrededor del contenido de game-area */
+    margin-left: 344px; /* Sumar el ancho de la sidebar y el margen izquierdo para evitar superposiciones */
+}
+
+.game-area img {
+    width: 700px; 
+    height: auto; /* Esto mantiene la proporción original de la imagen */
 }
 
 header {
@@ -78,61 +99,12 @@ header {
     z-index: 99;
 }
 
-.logo{
+.logo {
     font-size: 2em;
     color: white;
     user-select: none;
 }
 
-.navigation a {
-    position: relative;
-    font-size: 1.1em;
-    color:white;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
-}
 
-.navigation a::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 3px;
-    background: white;
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
-}
-.navigation a:hover::after{
-    transform-origin: left;
-    transform: scaleX(1);
-}
 
-.navigation a:hover::after{
-    transform-origin: left;
-    transform: scaleX(1);
-}
-
-.navigation .btnLogin-popup{
-    width: 130px;
-    height: 50px;
-    background: transparent;
-    border: 2px solid white;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.1em;
-    color:white;
-    font-weight: 500;
-    margin-left: 40px;
-    transition: .5s;
-}
-
-.navigation .btnLogin-popup:hover{
-    background: white;
-    color: #162938;
-}
 

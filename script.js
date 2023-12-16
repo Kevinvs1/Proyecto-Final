@@ -23,3 +23,32 @@ form.onsubmit = function(e){
         location.href = './game/laberintomuygrande.html';
       }     
 }
+
+document.forms["experto-form"].onsubmit = function(e) {
+  e.preventDefault();
+  let optionValue = this.niveles.value;
+  if (optionValue == 'pequeño') {
+      location.href = './game/laberintopequeño.html';
+  } else if (optionValue == 'mediano') {
+      location.href = './game/laberintomediano.html';
+  } else if (optionValue == 'grande') {
+      location.href = './game/laberintogrande.html';
+  } else {
+      location.href = './game/laberintomuygrande.html';
+  }
+}
+
+document.forms["contra-reloj-form"].onsubmit = function(e) {
+  e.preventDefault();
+  let optionValue = this.niveles.value;
+
+    if (optionValue == 'muy pequeño') {
+      location.href = './game/laberintomuypequeño.html';
+  } else if (optionValue == 'mediano') {
+      location.href = './game/laberintomediano.html';
+  } else if (optionValue == 'grande') {
+      location.href = './game/laberintogrande.html';
+  } else {
+      location.href = './game/laberintomuygrande.html';
+  }
+}
