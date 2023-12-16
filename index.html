@@ -19,32 +19,55 @@
 
     <div class="wrapper">
         <div class="form-box login" onsubmit="return iniciarSesion()">
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="usuario" id="usuario" name="usuario" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock"></ion-icon></span>
-                    <input type="password" id="password" name="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">
-                    Recuerdame</label>
-                    <a href="#">¿Olvidaste tu contraseña?</a>
-                </div>
-                <button type="submit" class="btn">Login</button>
-                <div class="login-register">
-                    <p>¿No tienes una cuenta?<a
-                        href="register.html"
-                        class="register-link">Registrarse</a>
-                </div>
-            </form>
+          <h2>Login</h2>
+          <form action="#">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="usuario" id="usuario" name="usuario" required>
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="lock"></ion-icon></span>
+              <input type="password" id="password" name="password" required>
+              <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox"> Recuérdame</label>
+              <a href="#">¿Olvidaste tu contraseña?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-register">
+              <p>¿No tienes una cuenta?<a href="#" onclick="mostrarRegistro()">Registrarse</a></p>
+            </div>
+          </form>
         </div>
-    </div>    
+    
+        <div class="form-box register" style="display: none;">
+          <h2>Registrarse</h2>
+          <form action="#" onsubmit="return validarFormulario()">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="person"></ion-icon></span>
+              <input type="text" name="username" id="usuarioRegistro" required>
+              <label>Username</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" name="email" id="emailRegistro" required>
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="lock"></ion-icon></span>
+              <input type="password" name="password" id="passwordRegistro" required>
+              <label>Password</label>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="login-register">
+              <p>¿Ya tienes una cuenta?<a href="#" onclick="mostrarLogin()">Login</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="login.js"></script>
 </body>
