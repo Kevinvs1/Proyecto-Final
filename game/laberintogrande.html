@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de laberinto</title>
+    <link rel="stylesheet" href="../game/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">Juego de laberinto</h2>
+        <nav class="navigation">
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+    <div class="contenedor">
+        <div class="row">
+            <div class="sidebar">
+            <div>
+                <h2>Nivel del laberinto: Grande</h2>
+            </div>
+                    <h2>Completa el laberinto</h2>
+                </br>
+                    <p>Intenta completar el nivel para lograr un record.</p>
+                </br>
+                    <nav>
+                        <input class="btn" type="submit" value="New" onclick="location.href='../game/laberintomediano.html'">
+                        <input class="btn" type="submit" value="Reset" onclick="location.href='../game/laberintomediano.html'">
+
+                    </nav>
+            </div>
+            <div class="game-area">            
+                <img src="../game/imagenes/maze.jpg">        
+            </div> 
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
